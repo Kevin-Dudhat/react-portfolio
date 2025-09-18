@@ -16,8 +16,8 @@ export default function Hero() {
     return (
         <div className='border-b border-neutral-900 pb-4 lg:mb-35'>
             <div className='flex flex-wrap'>
-                <div className='w-full lg:w-1/2'>
-                    <div className='flex flex-col items-center lg:items-start'>
+                <div className='w-full'>
+                    <div className='flex flex-col items-center text-center'>
                         <motion.h1
                             variants={container(0)}
                             initial='hidden'
@@ -31,7 +31,7 @@ export default function Hero() {
                             animate='visible'
                             className='bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent'
                         >
-                            Full Stack Developer
+                            Front-End Developer
                         </motion.span>
                         <motion.p
                             variants={container(1)}
@@ -43,7 +43,7 @@ export default function Hero() {
                         </motion.p>
                     </div>
                 </div>
-                <div className='w-full lg:w-1/2 lg:p-8'>
+                {/* <div className='w-full lg:w-1/2 lg:p-8'>
                     <div className='flex justify-center'>
                         <motion.img
                             initial={{ x: 100, opacity: 0 }}
@@ -53,7 +53,7 @@ export default function Hero() {
                             alt="kevinProfileImage"
                         />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

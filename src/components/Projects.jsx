@@ -1,6 +1,7 @@
 import React from 'react'
 import { PROJECTS } from '../constants'
 import { motion } from 'framer-motion'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 export default function Projects() {
     return (
@@ -22,7 +23,7 @@ export default function Projects() {
                             transition={{ duration: 1 }}
                             className="w-full lg:w-1/4"
                         >
-                            <img src={project.image} alt={project.image} width={150} height={150} className='mb-6 rounded' />
+                            <img src={project.image} alt={project.image} className='mb-6 rounded w-[300px] h-[150px]' />
                         </motion.div>
                         <motion.div
                             whileInView={{ opacity: 1, x: 0 }}
@@ -30,7 +31,12 @@ export default function Projects() {
                             transition={{ duration: 1 }}
                             className="w-full max-w-xl lg:w-3/4"
                         >
-                            <h6 className='mb-2 font-semibold'>{project.title}</h6>
+                            <h6 className='mb-2 font-semibold'>
+                                <a className='flex items-center gap-2 underline' href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                                    {project.title}
+                                    <span className=' text-sm'><FaExternalLinkAlt /></span>
+                                </a>
+                            </h6>
                             <p className='mb-4 text-neutral-400'>{project.description}</p>
                             {project.technologies.map((tech, index) => (
                                 <span key={index} className='mr-2 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-900'>{tech}</span>

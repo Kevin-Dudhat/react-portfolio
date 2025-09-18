@@ -8,8 +8,9 @@ export default function Navbar() {
             <img src="/img/kevinLogo.png" alt="kevinLogo" className="mx-2 w-10"/>
         </div>
         <div className="m-8 flex items-center justify-center gap-4 text-2xl">
-            <FaLinkedin/>
-            <FaInstagram/>
+            <a href="https://www.linkedin.com/in/kevin-dudhat/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin/>
+            </a>
         </div>
     </nav>
   )
